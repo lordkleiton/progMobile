@@ -19,6 +19,8 @@
 <button id="og">Original</button>
 <button id="posi">posicao</button>
 <button id="compPosi">compartilha</button>
+	
+<h1 id="aceleracao"></h1>
 <canvas id="snapshot" min-width=320 min-height=240></canvas>
 <script>
 
@@ -105,6 +107,12 @@
 	    x.innerHTML = "Latitude: " + position.coords.latitude + 
 	    "<br>Longitude: " + position.coords.longitude; 
 	}
+	
+	//negocio la de tremer
+	var z = document.getElementById("aceleracao");
+	window.addEventListener('deviceorientation', function(event) {
+  		z.innerHTML = event.alpha + ' : ' + event.beta + ' : ' + event.gamma;
+	});
 </script>
 </body>
 </html>
