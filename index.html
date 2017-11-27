@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+	<title>oi</title>
+	<style type="text/css">
+		#snapshot, #player {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<video id="player" controls autoplay></video>
+<h1 id="oi">oi</h1>
+<button id="usaCamera">Usar camera</button>
+<button id="capture">Capture</button>
+<button id="inverter">Inverter</button>
+<button id="sepia">Sepia</button>
+<button id="gs">Tons de cinza</button>
+<button id="og">Original</button>
+<button id="posi">posicao</button>
+<button id="compPosi">compartilha</button>
+<canvas id="snapshot" width=320 height=240></canvas>
+<script>
+
+	//camera
+  var player = document.getElementById('player'); 
+  var snapshotCanvas = document.getElementById('snapshot');
+  var captureButton = document.getElementById('capture');
+
+
+  var btnInverter = document.getElementById('inverter');
+  var btnSepia = document.getElementById('sepia');
+  var btnGS = document.getElementById('gs');
+  var btnOG = document.getElementById('og');
+  var btnUsaCamera = document.getElementById('usaCamera');
+  var btnCompPosi = document.getElementById('compPosi');
+
+  var handleSuccess = function(stream) {    
+    player.srcObject = stream;
+    player.removeAttribute("controls");
+    player.style.display = "block";
+  };
+
+  btnInverter.addEventListener('click', function(){
+  	snapshotCanvas.style.filter = "invert(1)";
+  });
+
+  btnGS.addEventListener('click', function(){
+  	snapshotCanvas.style.filter = "grayscale(100%)";
+  });
+
+  btnSepia.addEventListener('click', function(){
+  	snapshotCanvas.style.filter = "sepia(100%)";
+  });
+
+  btnOG.addEventListener('click', function(){
+  	snapshotCanvas.style.filter = "none";
+  });
+
+  btnUsaCamera.addEventListener('click', function(){
+  	navigator.mediaDevices.getUserMedia({video: true})
+      .then(handleSuccess);
+  });
+
+  btnCompPosi.addEventListener('click', function(){
+  	if (navigator.share) {
+	  navigator.share({
+	      text: 'Latitude e longitude: ' + x.innerHTML,
+	  })
+	  .then(() => console.log('Successful share'))
+	  .catch((error) => console.log('Error sharing', error));
+	}
+  });
+
+  captureButton.addEventListener('click', function() {
+    var context = snapshot.getContext('2d');
+    // Draw the video frame to the canvas.
+    context.drawImage(player, 0, 0, snapshotCanvas.width, 
+        snapshotCanvas.height);
+
+    snapshotCanvas.style.display = "block";
+  });
+
+
+  //localizacao
+  var btnPosi = document.getElementById("posi");
+  var x = document.getElementById("oi");
+
+  btnPosi.addEventListener('click', function(){
+  	getLocation();
+  });
+
+	function getLocation() {
+	    if (navigator.geolocation) {
+	        navigator.geolocation.getCurrentPosition(showPosition);
+	    } else {
+	        x.innerHTML = "Geolocation is not supported by this browser.";
+	    }
+	}
+	function showPosition(position) {
+	    x.innerHTML = "Latitude: " + position.coords.latitude + 
+	    "<br>Longitude: " + position.coords.longitude; 
+	}
+</script>
+</body>
+</html>
