@@ -67,7 +67,9 @@
   btnCompPosi.addEventListener('click', function(){
   	if (navigator.share) {
 	  navigator.share({
+		  title: 'aaaaaaaa',
 	      text: 'Latitude e longitude: ',
+		  url: 'www.aaaaa.aaa',
 	  })
 	  .then(() => console.log('Successful share'))
 	  .catch((error) => console.log('Error sharing', error));
