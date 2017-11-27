@@ -33,6 +33,7 @@
   var btnGS = document.getElementById('gs');
   var btnOG = document.getElementById('og');
   var btnUsaCamera = document.getElementById('usaCamera');
+	//só funciona no chrome mobile acima do 61
   var btnCompPosi = document.getElementById('compPosi');
 
   var handleSuccess = function(stream) {    
@@ -62,6 +63,7 @@
       .then(handleSuccess);
   });
 
+	//só funciona no chrome mobile acima do 61
   btnCompPosi.addEventListener('click', function(){
   	if (navigator.share) {
 	  navigator.share({
