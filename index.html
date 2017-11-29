@@ -124,6 +124,8 @@ function motion(e) {
     if(!acc.hasOwnProperty('x')) {
         acc = e.accelerationIncludingGravity;
     }
+	
+	var numero = 0;
 
     if(!acc.x) return;
 
@@ -150,6 +152,23 @@ function motion(e) {
         }
 
         if(moveCounter > 2) {
+		numero++;
+		switch (numero){
+			case 0:
+				snapshotCanvas.style.filter = "invert(1)";
+				break;
+			case 1:
+				snapshotCanvas.style.filter = "grayscale(100%)";
+				break;
+			case 2:
+				snapshotCanvas.style.filter = "sepia(100%)";
+				break;
+			case 3:
+				snapshotCanvas.style.filter = "none";
+				break;
+			default:
+				numero = 0;
+		}
             z.innerHTML = 'SHAKE!!!';
             moveCounter = 0;
         }
