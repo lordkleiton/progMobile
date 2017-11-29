@@ -110,8 +110,8 @@
 	
 	//negocio la de tremer
 	var z = document.getElementById("aceleracao");
-	window.addEventListener('deviceorientation', function(event) {
-  		z.innerHTML = event.alpha + ' : ' + event.beta + ' : ' + event.gamma;
+	window.addEventListener('devicemotion', function(event) {
+  		z.innerHTML = event.acceleration.x + ' : ' + event.acceleration.y + ' : ' + event.acceleration.z;
 	});
 </script>
 </body>
