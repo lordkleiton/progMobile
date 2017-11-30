@@ -21,7 +21,7 @@
 <button id="compPosi">compartilha</button>
 	
 <h1 id="aceleracao"></h1>
-<canvas id="snapshot" min-width=320 min-height=240></canvas>
+<canvas id="snapshot"></canvas>
 <script>
 
 	//camera
@@ -43,6 +43,9 @@
     player.removeAttribute("controls");
     player.style.display = "block";
   };
+	
+	snapshotCanvas.style.width = player.style.width;
+	snapshotCanvas.style.height = player.style.height;
 
   btnInverter.addEventListener('click', function(){
   	snapshotCanvas.style.filter = "invert(1)";
