@@ -123,6 +123,8 @@
 	
 	let lastX, lastY, lastZ;
 let moveCounter = 0;
+	
+	var numero = 0;
 
 function motion(e) {
     let acc = e.acceleration;
@@ -131,7 +133,7 @@ function motion(e) {
     }
 	e.interval = 1000;
 	
-	var numero = 0;
+	
 
     if(!acc.x) return;
 
