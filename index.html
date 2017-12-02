@@ -149,9 +149,9 @@ function motion(e) {
             return;
         }
 
-        let deltaX = acc.x - lastX;//Math.abs(acc.x - lastX);
-        let deltaY = acc.y - lasty;//Math.abs(acc.y - lastY);
-        let deltaZ = acc.z - lastz;//Math.abs(acc.z - lastZ);
+        let deltaX = Math.abs(acc.x - lastX);
+        let deltaY = Math.abs(acc.y - lastY);
+        let deltaZ = Math.abs(acc.z - lastZ);
 	    
 	    
         
@@ -161,7 +161,7 @@ function motion(e) {
             moveCounter = Math.max(0, --moveCounter);
         }
 
-        if(moveCounter > 3) {
+        if(moveCounter >= 3) {
 		numero++;
             
             moveCounter = 0;
