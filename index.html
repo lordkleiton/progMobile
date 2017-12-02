@@ -140,9 +140,9 @@ function motion(e) {
     if(!acc.x) return;
 
     //only log if x,y,z > 1
-    if(Math.abs(acc.x) >= 1 &&
-    Math.abs(acc.y) >= 1 &&
-    Math.abs(acc.z) >=1) {
+    if(Math.abs(acc.x) >= 1 ){//&&
+    //Math.abs(acc.y) >= 1 &&
+    //Math.abs(acc.z) >=1) {
         //console.log('motion', acc);
         if(!lastX) {
             lastX = acc.x;
