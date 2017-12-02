@@ -155,7 +155,7 @@ function motion(e) {
 	    
 	    
         
-        if(deltaX + deltaY + deltaZ > 20) {
+        if(deltaX + deltaY + deltaZ > 40) {
             moveCounter++;
         } else {
             moveCounter = Math.max(0, --moveCounter);
@@ -163,7 +163,7 @@ function motion(e) {
 
         if(moveCounter > 2) {
 		numero++;
-            z.innerHTML = numero;
+            
             moveCounter = 0;
         }
 	    if (numero > 3)
@@ -183,7 +183,7 @@ function motion(e) {
 				snapshotCanvas.style.filter = "none";
 				break;
 		}
-	    
+	    z.innerHTML = numero;
 	    console.log(numero);
 
         lastX = acc.x;
