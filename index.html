@@ -149,9 +149,9 @@ function motion(e) {
             return;
         }
 
-        let deltaX = Math.abs(acc.x);// - lastX);
-        let deltaY = Math.abs(acc.y);// - lastY);
-        let deltaZ = Math.abs(acc.z);// - lastZ);
+        let deltaX = acc.x - lastX;//Math.abs(acc.x - lastX);
+        let deltaY = acc.y - lasty;//Math.abs(acc.y - lastY);
+        let deltaZ = acc.z - lastz;//Math.abs(acc.z - lastZ);
 	    
 	    
         
