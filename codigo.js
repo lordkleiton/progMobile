@@ -1,3 +1,8 @@
+	//registra o service worker
+	navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
+ 		console.log('Excellent, registered with scope: ', registration.scope);
+	});
+
 	//camera
 	var player = document.getElementById('player'); 
 	var snapshotCanvas = document.getElementById('snapshot');
