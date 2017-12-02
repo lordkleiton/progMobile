@@ -155,13 +155,13 @@ function motion(e) {
 	    
 	    
         
-        if(deltaX + deltaY + deltaZ > 30) {
+        if(deltaX + deltaY + deltaZ > 20) {
             moveCounter++;
         } else {
             moveCounter = Math.max(0, --moveCounter);
         }
 
-        if(moveCounter > 2) {
+        if(moveCounter > 3) {
 		numero++;
             
             moveCounter = 0;
