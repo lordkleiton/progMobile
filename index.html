@@ -21,6 +21,7 @@
 <button id="compPosi">compartilha</button>
 	
 <h1 id="aceleracao"></h1>
+	<h1 id="a">oi</h1>
 <canvas id="snapshot"></canvas>
 <script>
 
@@ -115,6 +116,7 @@
 	
 	//negocio la de tremer
 	var z = document.getElementById("aceleracao");
+	var a = document.getElementById("a");
 	//window.addEventListener('devicemotion', function(event) {
   	//	z.innerHTML = event.acceleration.x + ' : ' + event.acceleration.y + ' : ' + event.acceleration.z;
 	//});
@@ -152,6 +154,8 @@ function motion(e) {
         let deltaX = Math.abs(acc.x - lastX);
         let deltaY = Math.abs(acc.y - lastY);
         let deltaZ = Math.abs(acc.z - lastZ);
+	    
+	    a.innerHTML = 'x: ' + deltaX + ', y: ' + deltaY + ', z: ' + deltaZ;
 	    
 	    
         
