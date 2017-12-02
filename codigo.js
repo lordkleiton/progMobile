@@ -4,7 +4,7 @@
 	});
 	//limpa o cache
 	var limpa = document.getElementById('limpa');
-	button.addEventListener('click', function() {
+	limpa.addEventListener('click', function() {
 	  navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
 	    caches.delete('the-magic-cache').then(() => {
 	      alert('ok');
