@@ -159,7 +159,7 @@ function motion(e) {
 	    
 	    
         
-        if(deltaX + deltaY + deltaZ > 10) {
+        if(deltaX > 2){// + deltaY + deltaZ > 10) {
             moveCounter++;
         } else {
             moveCounter = Math.max(0, --moveCounter);
