@@ -2,6 +2,19 @@
 	navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
  		console.log('Excellent, registered with scope: ', registration.scope);
 	});
+	//limpa o cache
+	var limpa = document.getElementById('limpa');
+	button.addEventListener('click', function() {
+	  navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
+	    caches.delete('the-magic-cache').then(() => {
+	      alert('ok');
+	    }, () => {
+	      alert('Failed!');
+	    });
+	  }).catch(err => {
+	    alert('Couldn\'t get Service Worker- is it installed?');
+	  });
+	});
 
 	//camera
 	var player = document.getElementById('player'); 
