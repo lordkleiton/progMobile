@@ -155,7 +155,7 @@ function motion(e) {
         let deltaY = Math.abs(acc.y - lastY);
         let deltaZ = Math.abs(acc.z - lastZ);
 	    
-	    a.innerHTML = 'x: ' + deltaX + ', y: ' + deltaY + ', z: ' + deltaZ;
+	    a.innerHTML = 'x: ';// + deltaX + ', y: ' + deltaY + ', z: ' + deltaZ;
 	    
 	    
         
@@ -165,7 +165,7 @@ function motion(e) {
             moveCounter = Math.max(0, --moveCounter);
         }
 
-        if(moveCounter >= 3) {
+        if(moveCounter > 3) {
 		numero++;
             
             moveCounter = 0;
