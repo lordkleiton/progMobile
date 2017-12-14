@@ -70,31 +70,7 @@
 		snapshotCanvas.style.filter = "none";
 	});
 
-	//só funciona no chrome mobile acima do 61, serve pra invocar
-	//o compartilhador do sistema mesmo
-	
-	var compartilha = document.getElementById("shareOutros");
 
-if (navigator.share) {
-	$("#shareOutros").hide();
-}
-else {
-	$("#compPosi").hide();
-}
-
-	btnCompPosi.addEventListener('click', function(){
-		if (navigator.share) {
-			navigator.share({
-				title: 'aaaaaaaa',
-				text: 'Latitude e longitude: ',
-				url: 'www.aaaaa.aaa',
-			})
-				.then(() => console.log('Successful share'))
-				.catch((error) => console.log('Error sharing', error));
-		} else {
-    $("#shareOutros").toggle();}
-		
-	});
 
 
 	//localizacao
@@ -115,6 +91,33 @@ else {
 		x.innerHTML = "Latitude: " + position.coords.latitude + 
 			"<br>Longitude: " + position.coords.longitude; 
 	}
+
+	//só funciona no chrome mobile acima do 61, serve pra invocar
+	//o compartilhador do sistema mesmo
+	
+	var compartilha = document.getElementById("shareOutros");
+
+if (navigator.share) {
+	$("#shareOutros").hide();
+}
+else {
+	$("#compPosi").hide();
+}
+
+	btnCompPosi.addEventListener('click', function(){
+		if (navigator.share) {
+			navigator.share({
+				title: 'aaaaaaaa',
+				text: x.innerHTML,
+				url: 'www.aaaaa.aaa',
+			})
+				.then(() => console.log('Successful share'))
+				.catch((error) => console.log('Error sharing', error));
+		} else {
+    $("#shareOutros").toggle();}
+		
+	});
+
 
 	//acelerometro
 	//essa parte ainda ta muito sensivel, tem que ajustar melhor mas ainda
