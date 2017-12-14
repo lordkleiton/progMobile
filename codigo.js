@@ -72,6 +72,8 @@
 
 	//só funciona no chrome mobile acima do 61, serve pra invocar
 	//o compartilhador do sistema mesmo
+	
+	var compartilha = document.getElementById("shareOutros");
 	btnCompPosi.addEventListener('click', function(){
 		if (navigator.share) {
 			navigator.share({
@@ -81,7 +83,9 @@
 			})
 				.then(() => console.log('Successful share'))
 				.catch((error) => console.log('Error sharing', error));
-		}
+		} else {
+			compartilha.style.display = "block";}
+		
 	});
 
 
