@@ -75,7 +75,9 @@
 	
 	var compartilha = document.getElementById("shareOutros");
 
-	$("#shareOutros").hide();	
+if (navigator.share) {
+	$("#shareOutros").hide();
+}
 
 	btnCompPosi.addEventListener('click', function(){
 		if (navigator.share) {
