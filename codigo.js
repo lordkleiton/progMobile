@@ -30,8 +30,10 @@
 
 	//botao que pede pela camera
 	btnUsaCamera.addEventListener('click', function(){
+
 		navigator.mediaDevices.getUserMedia({video: true})
 			.then(handleSuccess);
+
 	});
 
 	//executa se conseguir acesso da camera
@@ -39,10 +41,12 @@
 		player.srcObject = stream;
 		player.removeAttribute("controls");
 		player.style.display = "block";
+		document.getElementById('camPH').style.display = 'none';
 	};
 
 	//tira a foto e desenha ela no canvas
 	captureButton.addEventListener('click', function() {
+		document.getElementById('fotoPH').style.display = 'none';
 		var context = snapshot.getContext('2d');
 		context.drawImage(player, 0, 0, snapshotCanvas.width, 
 		snapshotCanvas.height);

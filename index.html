@@ -1,31 +1,37 @@
 <!doctype html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no" />
   	<link rel="manifest" href="manifest.json" />
-	<title>oi</title>
-	<style type="text/css">
-		#snapshot, #player {
-			display: none;
-		}
-	</style>
+	<title>PoC Hybrid</title>
+	<link rel="stylesheet" href="estilo.css">
 	<script type="text/javascript" src="./codigo.js" defer></script>
 </head>
 <body>
-<video id="player" controls autoplay></video>
-<h1 id="oi">oi</h1>
-<button id="usaCamera">Usar camera</button>
-<button id="capture">Capture</button>
-<button id="inverter">Inverter</button>
+	<div id="corpo">
+<button id="usaCamera">Use Camera</button>	
+<img id="camPH" src="http://via.placeholder.com/200x150?text=%20">
+<video id="player" autoplay></video>
+
+<button id="capture">Capture</button><br>
+<img id="fotoPH" src="http://www.pixedelic.com/themes/geode/demo/wp-content/uploads/sites/4/2014/04/placeholder4-200x150.png">
+<canvas id="snapshot"></canvas>
+
+<div class="btns">
+<button id="inverter">Invert</button>
 <button id="sepia">Sepia</button>
-<button id="gs">Tons de cinza</button>
-<button id="og">Original</button>
-<button id="posi">posicao</button>
-<button id="compPosi">compartilha</button>
-<button id="limpa">limpa cache</button>
+<button id="gs">Grayscale</button><br>
+</div>
+<button id="og">Original</button><br>
+
+
+<button id="posi">Position</button> <label id="oi"></label><br>
+
+<button id="compPosi">Share</button><br>
+<button id="limpa" hidden>Clean</button>
 	
 <h1 id="aceleracao"></h1>
-	<h1 id="a">oi</h1>
-<canvas id="snapshot"></canvas>
+	<h1 id="a"></h1>
+</div>
 </body>
 </html>

@@ -1,0 +1,105 @@
+
+*{
+	color: #ccc;
+	margin: 0 auto;
+}
+body{
+	background-color: #222;
+	max-width: 400px;
+	margin-top: 20px;
+}
+
+
+
+button{
+	background-color: #444;
+	border: solid 1px;
+	cursor: pointer;
+	font-size: 18px;
+	width: 100px;
+
+	margin-top: 10px;
+
+				
+
+}
+button:hover{
+	background-color: #ccc;
+	color: #444;
+	-webkit-transition: ease 0.5s; /* Safari */
+	transition: ease 0.5s;
+	-moz-transition: ease 0.5s;
+	-o-transition: ease 0.5s;
+
+}
+
+button:focus{
+	outline: none;
+}
+
+#corpo{
+	width: 320px;
+	
+	display: grid;
+}
+.btns{
+
+   align-self: center;
+margin:auto; 
+}
+
+#oi{
+	margin-top: 5%;
+	display: inline-block;
+	font-size: 12pt;
+	height: 50px;
+	padding-top: 5%;
+}
+
+#a{
+	margin-top: 5%;
+	display: inline-block;
+	font-size: 12pt;
+	height: 50px;
+	padding-top: 5%;
+}
+
+#og{
+	
+}
+
+
+#snapshot, #player {
+			display: none;
+			
+}
+img{
+	width: 200px;
+	height: 150px;
+}
+
+#usaCamera{
+	margin-left: 25%;
+	min-width: 160px;
+	margin-bottom: 2%;
+
+}
+
+#capture{
+	margin-left: 25%;
+	min-width: 160px;
+	margin-bottom: 2%;
+}
+
+#player{
+
+	width: 200px;
+	height: 150px;
+	margin: 0 auto;
+
+}
+
+#snapshot{
+	width: 200px;
+	height: 150px;
+}
