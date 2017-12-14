@@ -57,6 +57,7 @@ button:focus {
 
 #snapshot, #player {
 	display: none;	
+	margin: auto;
 }
 
 img {
