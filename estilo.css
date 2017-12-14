@@ -1,51 +1,45 @@
 
-*{
+* {
 	color: #ccc;
-	
 }
-body{
+
+body {
 	background-color: #222;
 	margin-top: 20px;
 }
 
-
-
-button{
+button {
 	background-color: #444;
 	border: solid 1px;
 	cursor: pointer;
 	font-size: 18px;
 	width: 100px;
-
 	margin-top: 10px;
-
-				
-
 }
-button:hover{
+
+button:hover {
 	background-color: #ccc;
 	color: #444;
 	-webkit-transition: ease 0.5s; /* Safari */
 	transition: ease 0.5s;
 	-moz-transition: ease 0.5s;
 	-o-transition: ease 0.5s;
-
 }
 
-button:focus{
+button:focus {
 	outline: none;
 }
 
-#corpo{	
+#corpo {	
 	display: grid;
 }
-.btns{
 
-   align-self: center;
-margin:auto; 
+.btns {
+	align-self: center;
+	margin:auto; 
 }
 
-#oi{
+#oi {
 	margin-top: 5%;
 	display: inline-block;
 	font-size: 12pt;
@@ -53,51 +47,43 @@ margin:auto;
 	padding-top: 5%;
 }
 
-#a{
+#a {
 	margin-top: 5%;
 	display: inline-block;
 	font-size: 12pt;
 	height: 50px;
 	padding-top: 5%;
 }
-
-#og{
-	
-}
-
 
 #snapshot, #player {
-			display: none;
-			
+	display: none;	
 }
-img{
+
+img {
 	width: 150px;
 	height: 240px;
 	margin: auto;
 }
 
-#usaCamera{
-	margin-left: 25%;
-	min-width: 160px;
-	margin-bottom: 2%;
-
-}
-
-#capture{
+#usaCamera {
 	margin-left: 25%;
 	min-width: 160px;
 	margin-bottom: 2%;
 }
 
-#player{
+#capture {
+	margin-left: 25%;
+	min-width: 160px;
+	margin-bottom: 2%;
+}
 
+#player {
 	width: 150px;
 	height: 240px;
 	margin: 0 auto;
-
 }
 
-#snapshot{
+#snapshot {
 	width: 150px;
 	height: 240px;
 }
