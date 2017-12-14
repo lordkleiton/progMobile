@@ -75,8 +75,10 @@
 	
 	var compartilha = document.getElementById("shareOutros");
 
-if (!navigator.share) {
+if (navigator.share) {
 	$("#shareOutros").hide();
+}
+else {
 	$("#compPosi").hide();
 }
 
