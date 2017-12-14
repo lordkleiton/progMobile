@@ -4,6 +4,6 @@ Progressive Web App (PWA) criada para o trabalho final sobre aplicações multip
 
 # integrantes
 
-Schaffer Júnior
-Mário Silva
-Matheus Oliveira
+- Schaffer Júnior
+- Mário Silva
+- Matheus Oliveira
