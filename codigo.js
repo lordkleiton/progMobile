@@ -89,7 +89,7 @@
 	}
 	function showPosition(position) {
 		x.innerHTML = "Latitude: " + position.coords.latitude + 
-			"<br>Longitude: " + position.coords.longitude; 
+			", Longitude: " + position.coords.longitude; 
 	}
 
 	//só funciona no chrome mobile acima do 61, serve pra invocar
@@ -107,9 +107,8 @@ else {
 	btnCompPosi.addEventListener('click', function(){
 		if (navigator.share) {
 			navigator.share({
-				title: 'aaaaaaaa',
+				title: 'testePWA - Localização',
 				text: x.innerHTML,
-				url: 'www.aaaaa.aaa',
 			})
 				.then(() => console.log('Successful share'))
 				.catch((error) => console.log('Error sharing', error));
