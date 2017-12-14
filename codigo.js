@@ -84,7 +84,7 @@
 				.then(() => console.log('Successful share'))
 				.catch((error) => console.log('Error sharing', error));
 		} else {
-			compartilha.style.zIndex = "1";}
+			compartilha.style.display = "inline";}
 		
 	});
 
