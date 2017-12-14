@@ -1,10 +1,12 @@
 
 *{
 	color: #ccc;
-	margin: 0 auto;
+	
 }
 body{
 	background-color: #222;
+	
+	width: 320px;
 	margin-top: 20px;
 }
 
@@ -37,6 +39,7 @@ button:focus{
 }
 
 #corpo{
+	width: 320px;
 	
 	display: grid;
 }
