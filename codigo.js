@@ -74,6 +74,9 @@
 	//o compartilhador do sistema mesmo
 	
 	var compartilha = document.getElementById("shareOutros");
+
+	$("#shareOutros").hide();	
+
 	btnCompPosi.addEventListener('click', function(){
 		if (navigator.share) {
 			navigator.share({
