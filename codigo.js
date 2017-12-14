@@ -84,7 +84,7 @@
 				.then(() => console.log('Successful share'))
 				.catch((error) => console.log('Error sharing', error));
 		} else {
-			compartilha.style.display = "inline";}
+    $("#shareOutros").toggle();}
 		
 	});
 
