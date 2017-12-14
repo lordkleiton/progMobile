@@ -8,6 +8,10 @@ body {
 	margin-top: 20px;
 }
 
+#shareOutros {
+	display: none;
+}
+
 button {
 	background-color: #444;
 	border: solid 1px;
