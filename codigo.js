@@ -77,6 +77,7 @@
 
 if (navigator.share) {
 	$("#shareOutros").hide();
+	$("#compPosi").hide();
 }
 
 	btnCompPosi.addEventListener('click', function(){
