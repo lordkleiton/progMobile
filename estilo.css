@@ -5,8 +5,6 @@
 }
 body{
 	background-color: #222;
-	
-	width: 320px;
 	margin-top: 20px;
 }
 
@@ -38,9 +36,7 @@ button:focus{
 	outline: none;
 }
 
-#corpo{
-	width: 320px;
-	
+#corpo{	
 	display: grid;
 }
 .btns{
